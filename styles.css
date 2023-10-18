@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: grey;
+
+}
+img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    filter: grayscale(100%);
+    transition: 0.5s ease-in-out;
+
+}
+img:hover {
+    filter: grayscale(0%);
+
+}
+/* ////////////////////////// end  */
+/* changing text selection color  */
+.container {
+    width: 70%;
+    margin: 0 auto;
+
+}
+h1::selection {
+    background: #f00;
+    color: yellow;
+}
+p::selection {
+    background: green;
+    color: yellow;
+}
+/* /////////////////////// end  */
+/* start menu hover effects 
+ */
+ul {
+    margin: 300px 200px;
+    padding: 0;
+    display: flex;
+    margin-top: 0px;
+    
+}
+ul li {
+    list-style: none;
+    padding: 10px 20px;
+
+}
+ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1em;
+    color: blue;
+    position: relative;
+
+}
+ul li a:before {
+    content: '';
+    width: 0px;
+    height: 5px;
+    background: teal;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transition: 0.5s;
+
+}
+ul li:hover a:before {
+    width: 50%;
+    transform: translateX(100%);
+
+}
+/* //////////////////////////// end  */
+/* start icons hover effect address, phone, email  */
+.ul2 {
+    margin: 300px auto;
+    width: 500%;
+
+}
+.ul2 .li2 {
+    list-style: none;
+    float: left;
+    text-align: center;
+    width: 6%;
+    color: fuchsia;
+}
+.ul2 .li2 .a2 {
+    text-decoration: none;
+
+}
+.ul2 .li2 .a2 .fa {
+    font-size: 4em;
+    transition: 0.5s;
+
+
+}
+.ul2 .li2 .a2 .text {
+    opacity: 0;
+    transition: 0.5s;
+    transform: translateY(20px);
+
+}
+.ul2 .li2:hover .fa {
+    transform: translateY(-20px) scale(0.5);
+
+}
+.ul2 .li2:hover .text {
+    transform: translateY(-20px);
+    opacity: 1;
+    
+}
